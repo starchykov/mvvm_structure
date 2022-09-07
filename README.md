@@ -2,35 +2,21 @@
 
 Sample Folder Structure for applications with MVVM Architecture.
 
-root application
-
-└─── data
-
-     └─── repositories
+     root application
+     └─── data
+          └─── repositories
+          └─── data providers
+     └─── domain
+          └─── entities
+          └─── constants
+          └─── clients
+          └─── services
+     └─── ui
+          └─── view_state
+          └─── view_model
+          └─── presentation_widget 
+     └─── utils
      
-     └─── data providers
-     
-└─── domain
-
-     └─── entities
-     
-     └─── constants
-     
-     └─── clients
-     
-     └─── services
-     
-└─── ui
-
-     └─── view_state
-     
-     └─── view_model
-     
-     └─── presentation_widget
-     
-└─── utils
-
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
