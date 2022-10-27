@@ -9,12 +9,18 @@ class SettingPageViewModel extends ChangeNotifier {
 
   SettingPageState get state => _state;
 
-  SettingPageViewModel () {
+  SettingPageViewModel() {
     _initialize();
   }
 
   void _initialize() async {
-    await setTheme();
+    await _setTheme();
+  }
+
+  Future<void> _setTheme() async {
+    await _themeService.getThemeMode();
+    _state = _state.copyWith(isDarkTheme: _themeService.isDarkMode);
+    notifyListeners();
   }
 
   Future<void> changeTheme() async {
@@ -22,11 +28,4 @@ class SettingPageViewModel extends ChangeNotifier {
     _state = _state.copyWith(isDarkTheme: _themeService.isDarkMode);
     notifyListeners();
   }
-
-  Future<void> setTheme() async {
-    await _themeService.getThemeMode();
-    _state = _state.copyWith(isDarkTheme: _themeService.isDarkMode);
-    notifyListeners();
-  }
-
 }

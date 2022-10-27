@@ -52,10 +52,10 @@ class _CountIncrementButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final CounterViewModel counterViewModel = context.read<CounterViewModel>();
+    final CounterViewModel viewModel = context.read<CounterViewModel>();
 
     return ElevatedButton(
-      onPressed: counterViewModel.onIncrementButtonPressed,
+      onPressed: viewModel.onIncrementButtonPressed,
       child: const Icon(Icons.add),
     );
   }
@@ -66,10 +66,10 @@ class _CountDecrementButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final CounterViewModel counterViewModel = context.read<CounterViewModel>();
+    final CounterViewModel viewModel = context.read<CounterViewModel>();
 
     return ElevatedButton(
-      onPressed: counterViewModel.onDecrementButtonPressed,
+      onPressed: viewModel.onDecrementButtonPressed,
       child: const Icon(Icons.remove),
     );
   }

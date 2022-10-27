@@ -9,5 +9,4 @@ class HomeViewModel {
   Future<void> onSettingButtonPressed() async {
     Navigator.of(context).pushNamed(AppNavigationRoutes.settingWidget);
   }
-
 }

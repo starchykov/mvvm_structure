@@ -5,7 +5,7 @@ import 'package:mvvm_structure/ui/counter_page/counter_state.dart';
 class CounterViewModel extends ChangeNotifier {
   final CountService _countService = CountService();
 
-  CountViewModelState _state = CountViewModelState(count: '0');
+  CountViewModelState _state = const CountViewModelState(count: '0');
 
   CountViewModelState get state => _state;
 
