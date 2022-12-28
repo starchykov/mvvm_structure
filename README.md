@@ -1,7 +1,7 @@
 # mvvm_structure
 
 Sample Folder Structure for applications with MVVM Architecture.
-This application implements folder or file structure and is a template for Flutter applications with MVVM architecture. This solution is based on best practices. The structure implemented in the following way:
+This application implements folder or file structure also this is a template for Flutter applications with MVVM architecture. This solution is based on best practices. The structure implemented in the following way:
 
      root application
      └─── data
