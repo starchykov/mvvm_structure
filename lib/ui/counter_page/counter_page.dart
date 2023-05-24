@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mvvm_structure/ui/counter_page/counter_state.dart';
 import 'package:mvvm_structure/ui/counter_page/counter_view_model.dart';
-
 import 'package:provider/provider.dart';
 
 class CounterPage extends StatelessWidget {
@@ -17,11 +16,11 @@ class CounterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
+    return  const CupertinoPageScaffold(
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: const [
+          children: [
             _CountTitle(),
             _CountIncrementButton(),
             _CountDecrementButton(),

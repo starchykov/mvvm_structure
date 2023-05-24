@@ -18,7 +18,7 @@ class ThemeRepository {
   Stream<String> get themeStream => _themeStreamController.stream.asBroadcastStream();
 
   Future<String> getThemeMode() async {
-    Brightness brightness = SchedulerBinding.instance.window.platformBrightness;
+    Brightness brightness = SchedulerBinding.instance.platformDispatcher.platformBrightness;
     String? themeMode = (await SharedPreferences.getInstance()).getString('color_theme');
     if (themeMode != null) return themeMode;
     return brightness.name;

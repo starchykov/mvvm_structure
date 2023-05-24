@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:mvvm_structure/domain/constants/constants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:mvvm_structure/ui/application/app_state.dart';
 import 'package:mvvm_structure/ui/application/app_view_model.dart';
 import 'package:mvvm_structure/ui/navigation/app_navigation.dart';
@@ -25,7 +25,9 @@ class MVVMStructure extends StatelessWidget {
         primaryColor: CupertinoColors.activeBlue,
         brightness: state.isDarkTheme ? Brightness.dark : Brightness.light,
       ),
-      supportedLocales: Language.locales,
+      locale: Locale(state.locale),
+      supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
       routes: appNavigation.routes,
       initialRoute: AppNavigationRoutes.homeWidget,
     );
