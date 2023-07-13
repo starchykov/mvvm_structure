@@ -47,8 +47,6 @@ class SettingPageViewModel extends ChangeNotifier {
   }
 
   Future<void> changeLocale({required int localeId}) async {
-    // print(localeId);
-    // print(_state.locale);
     String languageCode = AppLocalizations.supportedLocales[localeId].languageCode;
     if (_state.localeId == 0 && localeId == 0) return;
     await _localeService.changeLocale(locale: languageCode);

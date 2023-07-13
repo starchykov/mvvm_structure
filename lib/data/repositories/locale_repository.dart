@@ -15,7 +15,7 @@ class LocaleRepository {
   Stream<String> get localeStream => _localeStreamController.stream.asBroadcastStream();
 
   Future<String> getApplicationLocale() async {
-    String locale = (await SharedPreferences.getInstance()).getString('app_locale') ?? '';
+    String locale = (await SharedPreferences.getInstance()).getString('app_locale') ?? 'en';
     return locale;
   }
 
